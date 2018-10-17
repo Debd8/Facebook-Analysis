@@ -14,11 +14,11 @@ page_jab <- getPage("myjabong", token, n = 1000)
 page_sd <- getPage("Snapdeal", token, n = 1000)
 page_ebay <- getPage("ebaydotin", token, n = 1000)
 Compete <- rbind(page_amzn, page_fk, page_myn, page_jab, page_sd, page_ebay)
-if (!file.exists("C:/Users/debdutta/Documents/R/Compete.csv")) 
+if (!file.exists(".../R/Compete.csv")) 
 {
-  write.csv(Compete, "C:/Users/debdutta/Documents/R/Compete.csv")
+  write.csv(Compete, ".../R/Compete.csv")
 }
-Compete <- read.csv("C:/Users/debdutta/Documents/R/Compete.csv", header = T, stringsAsFactors = F, strip.white = T)
+Compete <- read.csv(".../R/Compete.csv", header = T, stringsAsFactors = F, strip.white = T)
 
 #Finding the most popular posts in terms of likes, comments & shares
 maxlikes <- Compete[which.max(Compete$likes_count),]
