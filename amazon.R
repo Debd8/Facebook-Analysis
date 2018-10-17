@@ -7,12 +7,12 @@ library(wesanderson)
 library(scales)
 
 # Data is read from Amazon India facebook page and saved for local use here:
-if (!file.exists("C:/Users/debdutta/Documents/R/AmazonIN.csv")) 
+if (!file.exists(".../R/AmazonIN.csv")) 
 {
   page <- getPage("AmazonIN", token, n = 5000)
-  write.csv(page, "C:/Users/debdutta/Documents/R/AmazonIN.csv")
+  write.csv(page, ".../R/AmazonIN.csv")
 }
-page <- read.csv("C:/Users/debdutta/Documents/R/AmazonIN.csv")
+page <- read.csv(".../R/AmazonIN.csv")
 
 # Plotting page popularity over time
 ## Convert Facebook date format to R date format
